@@ -164,11 +164,12 @@ body {
 
 /* Section alternation — white surface vs warm cream alt.
    Default .section has no bg (would show body cream), so we set white here
-   for clear alternation against .section--alt and the body. */
-.section {
+   for clear alternation against .section--alt and the body.
+   Exclude .cta-banner / .cta-inline so their own gradient/dark backgrounds win. */
+.section:not(.cta-banner):not(.cta-inline) {
   background: var(--color-surface);
 }
 
-.section--alt {
+.section--alt:not(.cta-banner):not(.cta-inline) {
   background: var(--color-bg-alt);
 }
