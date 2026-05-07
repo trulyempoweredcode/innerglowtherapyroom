@@ -82,6 +82,23 @@ body {
   background: var(--color-primary-dark);
 }
 
+/* Framework's `.hero--image .btn--primary` paints light taupe (--color-secondary)
+   for visibility against dark photos, which works for demos using a mid-tone
+   secondary. Heart & Glow's secondary is light taupe (#D8CFC7) — fades into
+   the warm hero photo. Force dark-taupe primary instead. */
+.hero--image .btn--primary,
+.nav--transparent-dark .btn--primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.hero--image .btn--primary:hover,
+.nav--transparent-dark .btn--primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
 .btn--accent {
   background: var(--color-accent);
   color: var(--color-primary-dark);
