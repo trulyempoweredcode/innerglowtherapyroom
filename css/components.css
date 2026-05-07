@@ -8132,6 +8132,22 @@ main > .section--alt + .section--alt:not(.section--dark):not(.cta-banner) {
   color: var(--color-text-heading);
   margin: 0;
   line-height: 1.3;
+  display: flex;
+  align-items: baseline;
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* Dotted leader between title and price — classic spa/restaurant menu treatment.
+   Pseudo grows to fill the gap; overflow:hidden on the title clips it cleanly. */
+.treatment-list__title::after {
+  content: '';
+  flex: 1 1 auto;
+  border-bottom: 1px dotted var(--color-border);
+  margin: 0 var(--space-md);
+  margin-bottom: 0.4em;
+  min-width: 24px;
 }
 .treatment-list__price {
   font-family: var(--font-heading);
@@ -8219,6 +8235,15 @@ main > .section--alt + .section--alt:not(.section--dark):not(.cta-banner) {
   }
   .treatment-list__head {
     align-items: flex-start;
+  }
+  .treatment-list__title {
+    white-space: normal;
+    overflow: visible;
+    flex: 1 1 100%;
+  }
+  /* Hide dotted leader on mobile — titles wrap freely instead. */
+  .treatment-list__title::after {
+    display: none;
   }
   .treatment-list__price {
     font-size: var(--text-md);
