@@ -8144,7 +8144,7 @@ main > .section--alt + .section--alt:not(.section--dark):not(.cta-banner) {
 .treatment-list__title::after {
   content: '';
   flex: 1 1 auto;
-  border-bottom: 1px dotted var(--color-border);
+  border-bottom: 2px dotted #8b847e;
   margin: 0 var(--space-md);
   margin-bottom: 0.4em;
   min-width: 24px;
@@ -8247,5 +8247,67 @@ main > .section--alt + .section--alt:not(.section--dark):not(.cta-banner) {
   }
   .treatment-list__price {
     font-size: var(--text-md);
+  }
+}
+
+/* --- Treatment-list image variants (v1.5.2) ---
+   Two visual variants of the same component: square thumbnail on the left,
+   or a circular thumbnail. Both use the same markup:
+     <div class="treatment-list__item treatment-list__item--image-square">
+       <div class="treatment-list__image"><img src="..." alt="..."></div>
+       <div class="treatment-list__content"> ... existing __head / __summary / __details ... </div>
+     </div>
+   On mobile both variants stack the image above the content. */
+
+.treatment-list__item--image-square,
+.treatment-list__item--image-circle {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-lg);
+}
+
+.treatment-list__image {
+  flex: 0 0 auto;
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  background-color: var(--color-bg-alt);
+}
+
+.treatment-list__item--image-square .treatment-list__image {
+  border-radius: calc(var(--aesthetic-radius) * 0.6);
+}
+
+.treatment-list__item--image-circle .treatment-list__image {
+  border-radius: 50%;
+}
+
+.treatment-list__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.treatment-list__content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .treatment-list__item--image-square,
+  .treatment-list__item--image-circle {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-md);
+  }
+  .treatment-list__image {
+    width: 100%;
+    height: 200px;
+  }
+  .treatment-list__item--image-circle .treatment-list__image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
   }
 }
