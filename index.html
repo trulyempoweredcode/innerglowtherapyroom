@@ -61,7 +61,7 @@
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <!-- SECTION: nav -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
+  <nav class="nav nav--transparent nav--transparent-dark" style="--nav-transparent-bg: transparent; border-bottom: none;" role="navigation" aria-label="Main navigation">
     <div class="container nav__inner">
       <a href="index.html" class="nav__brand">
         <!-- PROFILE:logo --><!-- /PROFILE:logo -->
@@ -72,6 +72,7 @@
         <a href="index.html" class="nav__link nav__link--active">Home</a>
         <a href="about.html" class="nav__link">About</a>
         <a href="treatments.html" class="nav__link">Treatments</a>
+        <a href="faq.html" class="nav__link">FAQ</a>
         <a href="blog.html" class="nav__link">Blog</a>
         <a href="contact.html" class="nav__link">Contact</a>
       </div>
@@ -85,6 +86,7 @@
       <a href="index.html" class="nav__link nav__link--active" role="menuitem">Home</a>
       <a href="about.html" class="nav__link" role="menuitem">About</a>
       <a href="treatments.html" class="nav__link" role="menuitem">Treatments</a>
+      <a href="faq.html" class="nav__link" role="menuitem">FAQ</a>
       <a href="blog.html" class="nav__link" role="menuitem">Blog</a>
       <a href="contact.html" class="nav__link" role="menuitem">Contact</a>
     </div>
@@ -118,91 +120,87 @@
   <main id="main">
 
     <!-- SECTION: hero -->
-    <section class="hero hero--half">
-      <div class="hero__inner">
-        <div class="hero__image-wrap">
-          <img src="images/hero.jpg" alt="The calm treatment room at Heart and Glow, Newbury — a softly-lit boutique wellness space" class="hero__image" width="1600" height="1067">
-        </div>
+    <section class="hero hero--image" style="background-image: url('images/hero.jpg');">
+      <div class="container hero__inner">
         <div class="hero__content">
           <span class="hero__label">THE CALM ROOM · NEWBURY</span>
-          <h1 class="hero__heading hero__heading--animate">Heart &amp; Glow</h1>
-          <p class="hero__text"><strong>A quiet, women-only space designed for you to slow down, switch off and feel like yourself again.</strong></p>
-          <p class="hero__text">At Heart &amp; Glow, every treatment is calm, unhurried and tailored to you — creating a deeply relaxing experience for both body and mind.</p>
+          <h1 class="hero__heading">Heart &amp; Glow</h1>
+          <p class="hero__text">A quiet, women-only space designed for you to slow down, switch off and feel like yourself again. At Heart &amp; Glow, every treatment is calm, unhurried and tailored to you — creating a deeply relaxing experience for both body and mind.</p>
           <div class="hero__actions">
             <a href="contact.html" class="btn btn--primary">Book your time to relax</a>
             <a href="treatments.html" class="btn btn--secondary">View Treatments</a>
           </div>
+          <ul class="hero__ticks">
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Women-only calm room</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Slow, unhurried treatments</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Free 2-hour parking on Mill Lane</li>
+          </ul>
         </div>
       </div>
     </section>
     <!-- /SECTION: hero -->
 
-    <!-- SECTION: welcome intro -->
-    <section class="section reveal">
-      <div class="container intro__inner">
-        <div class="intro__image-wrap" style="background-image: url('images/home-portrait.jpg');" role="img" aria-label="Soft, restful close-up at Heart and Glow"></div>
-        <div class="intro__text">
-          <span class="section-label">Welcome</span>
-          <h2>A quiet space, just for you</h2>
-          <p>[CONTENT NEEDED: short welcoming paragraph from Josie about what new visitors experience walking into the room — the warmth, the soft light, the feeling of being looked after.]</p>
-          <a href="about.html" class="btn btn--secondary">About Heart &amp; Glow</a>
-        </div>
-      </div>
-    </section>
-    <!-- /SECTION: welcome intro -->
-
-    <!-- SECTION: signature rituals -->
+    <!-- SECTION: services-overview -->
     <section class="section section--alt reveal">
       <div class="container text-center">
         <span class="section-label">Signature Rituals</span>
         <h2>Three calming experiences</h2>
         <p class="section-subtitle">Each unhurried and tailored to you.</p>
       </div>
-      <div class="container pricing-grid pricing-grid--3">
-        <div class="pricing-card">
-          <h3 class="pricing-card__title">Full Reset Ritual</h3>
-          <p class="pricing-card__price">£95</p>
-          <p class="pricing-card__sub">Slow massage + nurturing facial + gentle energy work</p>
-          <a href="contact.html" class="btn btn--secondary">Book this ritual</a>
-        </div>
-        <div class="pricing-card pricing-card--featured">
-          <h3 class="pricing-card__title">Heart &amp; Glow Signature Ritual</h3>
-          <p class="pricing-card__price">£130</p>
-          <p class="pricing-card__sub">A head-to-toe ultimate experience. [CONTENT NEEDED: 1-line description from Josie.]</p>
-          <a href="contact.html" class="btn btn--primary">Book this ritual</a>
-        </div>
-        <div class="pricing-card">
-          <h3 class="pricing-card__title">Deep Reset Ritual</h3>
-          <p class="pricing-card__price">£110</p>
-          <p class="pricing-card__sub">Longer, unhurried, deeper bodywork. [CONTENT NEEDED: 1-line description from Josie.]</p>
-          <a href="contact.html" class="btn btn--secondary">Book this ritual</a>
-        </div>
+      <div class="container grid grid--3">
+        <a href="treatments.html#service-full-reset" class="image-card">
+          <img src="images/service-swedish.jpg" alt="Full Reset Ritual — slow massage and facial at Heart and Glow" class="image-card__image" width="800" height="500" loading="lazy">
+          <div class="image-card__body">
+            <h3 class="image-card__title">Full Reset Ritual</h3>
+            <p class="image-card__text">Slow massage paired with a nurturing facial and gentle energy work — an unhurried hour to fully switch off.</p>
+            <span class="image-card__link">Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+          </div>
+        </a>
+        <a href="treatments.html#service-deep-reset" class="image-card">
+          <img src="images/service-deep-tissue.jpg" alt="Deep Reset Ritual — longer, deeper bodywork at Heart and Glow" class="image-card__image" width="800" height="500" loading="lazy">
+          <div class="image-card__body">
+            <h3 class="image-card__title">Deep Reset Ritual</h3>
+            <p class="image-card__text">A longer, deeper version of the reset — extra time on the body for when you need to truly let go.</p>
+            <span class="image-card__link">Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+          </div>
+        </a>
+        <a href="treatments.html#service-signature" class="image-card">
+          <img src="images/service-hot-stone.jpg" alt="Heart and Glow Signature Ritual — head-to-toe experience" class="image-card__image" width="800" height="500" loading="lazy">
+          <div class="image-card__body">
+            <h3 class="image-card__title">Heart &amp; Glow Signature Ritual</h3>
+            <p class="image-card__text">The full head-to-toe experience — massage, facial and gentle energy work woven into one calming session.</p>
+            <span class="image-card__link">Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+          </div>
+        </a>
       </div>
       <div class="container text-center section-footer">
-        <a href="treatments.html" class="btn btn--secondary">See all treatments</a>
+        <a href="treatments.html" class="btn btn--secondary">View All Treatments</a>
       </div>
     </section>
-    <!-- /SECTION: signature rituals -->
+    <!-- /SECTION: services-overview -->
 
-    <!-- SECTION: the room -->
+    <!-- SECTION: intro -->
     <section class="section reveal">
       <div class="container intro__inner">
-        <div class="intro__text">
-          <span class="section-label">THE SPACE</span>
-          <h2>Quiet, courtyard-side, birdsong on a still day</h2>
-          <p>[CONTENT NEEDED: paragraph about the treatment room — courtyard view, birdsong, soft light, intentionally simple. Why this room, why this corner of Newbury.]</p>
-          <a href="about.html" class="btn btn--secondary">About the room</a>
+        <div class="intro__image-wrap" style="background-image: url('images/home-portrait.jpg');" role="img" aria-label="Josie, founder of Heart and Glow — The Calm Room, Newbury">
         </div>
-        <div class="intro__image-wrap" style="background-image: url('images/room-detail.jpg');" role="img" aria-label="A soft detail of the treatment room — folded towel and eucalyptus on linen"></div>
+        <div class="intro__text">
+          <span class="section-label">Meet Josie</span>
+          <h2>Your therapist</h2>
+          <p>Hi, I'm Josie 💓 I created Heart &amp; Glow to offer a calm, welcoming space where women can truly relax. With over 4 years experience in beauty and massage, I've naturally moved towards slower, more restorative treatments — combining hands-on care with a calming, intentional approach.</p>
+          <p>[CONTENT NEEDED: short second paragraph from Josie about how she works in the room — pace, presence, what makes a session here different from elsewhere.]</p>
+          <a href="about.html" class="btn btn--secondary">More About Me</a>
+        </div>
       </div>
     </section>
-    <!-- /SECTION: the room -->
+    <!-- /SECTION: intro -->
 
     <!-- SECTION: testimonials -->
     <section class="section section--alt">
       <div class="container text-center">
         <span class="section-label">Client Words</span>
         <h2>Kind words from the room</h2>
+        <p class="section-subtitle">Real words from women who've reset here.</p>
       </div>
       <div class="container grid grid--3">
         <div class="testimonial testimonial--card">
@@ -214,7 +212,7 @@
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
           <p class="testimonial__quote">[CONTENT NEEDED: real testimonial from existing client — paste verbatim from old site or Facebook reviews.]</p>
-          <p class="testimonial__author">[CONTENT NEEDED: client initials + treatment]</p>
+          <p class="testimonial__author">[CONTENT NEEDED: client initials] <span class="testimonial__detail" style="display:inline; margin-left: 0.25em;">&mdash; [CONTENT NEEDED: treatment]</span></p>
         </div>
         <div class="testimonial testimonial--card">
           <div class="testimonial__stars">
@@ -225,7 +223,7 @@
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
           <p class="testimonial__quote">[CONTENT NEEDED: real testimonial from existing client.]</p>
-          <p class="testimonial__author">[CONTENT NEEDED: client initials + treatment]</p>
+          <p class="testimonial__author">[CONTENT NEEDED: client initials] <span class="testimonial__detail" style="display:inline; margin-left: 0.25em;">&mdash; [CONTENT NEEDED: treatment]</span></p>
         </div>
         <div class="testimonial testimonial--card">
           <div class="testimonial__stars">
@@ -236,7 +234,7 @@
             <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
           <p class="testimonial__quote">[CONTENT NEEDED: real testimonial from existing client.]</p>
-          <p class="testimonial__author">[CONTENT NEEDED: client initials + treatment]</p>
+          <p class="testimonial__author">[CONTENT NEEDED: client initials] <span class="testimonial__detail" style="display:inline; margin-left: 0.25em;">&mdash; [CONTENT NEEDED: treatment]</span></p>
         </div>
       </div>
     </section>
@@ -247,7 +245,7 @@
       <div class="container text-center">
         <h2>Take a moment for yourself</h2>
         <p>Bookings are quietly confirmed by message — choose a time that suits you and I'll be in touch the same day where I can.</p>
-        <a href="contact.html" class="btn btn--primary">Book your time to relax</a>
+        <a href="contact.html" class="btn btn--accent">Book your time to relax</a>
       </div>
     </section>
     <!-- /SECTION: cta -->
@@ -267,6 +265,7 @@
           <a href="index.html" class="footer__link">Home</a>
           <a href="about.html" class="footer__link">About</a>
           <a href="treatments.html" class="footer__link">Treatments</a>
+          <a href="faq.html" class="footer__link">FAQ</a>
           <a href="blog.html" class="footer__link">Blog</a>
           <a href="contact.html" class="footer__link">Contact</a>
         </div>
@@ -274,11 +273,11 @@
       <div class="footer__col">
         <p class="footer__heading">Treatments</p>
         <div class="footer__links">
-          <a href="treatments.html" class="footer__link">Full Reset Ritual</a>
-          <a href="treatments.html" class="footer__link">Deep Reset Ritual</a>
-          <a href="treatments.html" class="footer__link">Signature Ritual</a>
-          <a href="treatments.html" class="footer__link">Relaxing Massage</a>
-          <a href="treatments.html" class="footer__link">Relaxing Facial</a>
+          <a href="treatments.html#service-full-reset" class="footer__link">Full Reset Ritual</a>
+          <a href="treatments.html#service-deep-reset" class="footer__link">Deep Reset Ritual</a>
+          <a href="treatments.html#service-signature" class="footer__link">Signature Ritual</a>
+          <a href="treatments.html#service-relaxing-massage" class="footer__link">Relaxing Massage</a>
+          <a href="treatments.html#service-relaxing-facial" class="footer__link">Relaxing Facial</a>
         </div>
       </div>
       <div class="footer__col">
