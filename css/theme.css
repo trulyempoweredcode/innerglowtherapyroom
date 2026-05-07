@@ -192,10 +192,17 @@ body {
   color: var(--color-secondary-dark);
 }
 
-/* Treatment-list — featured ritual price in dusty rose so the eye picks up
-   the hierarchy without needing a featured-card variant. */
+/* Treatment-list — full colour on the menu rows.
+   Titles in dusty rose, prices in dark sage = title-and-price as a
+   harmonised rose+green pair on each card. */
+.treatment-list__title {
+  color: var(--color-accent-dark);
+  font-weight: 700;
+}
+
 .treatment-list__price {
   color: var(--color-secondary-dark);
+  font-weight: 700;
 }
 
 .treatment-list__details > summary {
@@ -203,7 +210,25 @@ body {
 }
 
 .treatment-list__details > summary:hover {
-  color: var(--color-secondary);
+  color: var(--color-accent-dark);
+}
+
+/* Sage left-accent stripe on treatment cards — quiet vertical rhythm
+   down the page. Picks up dusty-rose on hover. */
+.treatment-list__item {
+  border-left: 3px solid var(--color-secondary-light);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.treatment-list__item:hover {
+  border-left-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+/* Alternate section labels — Essentials uses dusty rose, so the page
+   breaks into a "rituals = sage" / "essentials = rose" rhythm. */
+.section--alt .section-label {
+  color: var(--color-accent-dark);
 }
 
 /* Pull-quote / blockquote — sage tint left border for visual rhythm. */
