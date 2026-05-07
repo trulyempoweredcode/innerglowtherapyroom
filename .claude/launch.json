@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "demo-massage",
+      "name": "heart-and-glow",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "D:/claude-custom-projects/Ai-Editor-Sites/demo-massage-therapist", "-l", "3999"],
-      "port": 3999
+      "runtimeArgs": ["serve", "D:/claude-custom-projects/Ai-Editor-Sites/heartandglow-newbury.co.uk", "-l", "4001"],
+      "port": 4001
     }
   ]
 }
