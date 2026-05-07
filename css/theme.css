@@ -11,31 +11,44 @@
 
 /* --- Theme Variables --- */
 :root {
-  /* Colour Palette — Josie's brand hex codes */
-  --color-primary: #6E6259;          /* dark taupe */
+  /* Colour Palette — cream/blush canvas with sage + dusty rose accents
+     for hierarchy and warmth. */
+
+  /* Primary — anchor neutral (dark taupe). Body type, primary buttons. */
+  --color-primary: #5C534B;          /* deeper than v1 for stronger contrast */
   --color-primary-light: #8B7F75;
-  --color-primary-dark: #4F463F;
-  --color-secondary: #D8CFC7;        /* light taupe */
-  --color-secondary-light: #E8DED6;  /* soft beige */
-  --color-secondary-dark: #B5A99E;
-  --color-accent: #E5C9CE;           /* deeper blush for contrast */
-  --color-accent-light: #F2E4E6;     /* soft blush */
+  --color-primary-dark: #3F3833;
 
+  /* Secondary — sage green. The hero accent for CTAs, badges, pull-quotes. */
+  --color-secondary: #7B8E7A;        /* muted sage */
+  --color-secondary-light: #A3B3A2;
+  --color-secondary-dark: #5C6F5C;
+
+  /* Accent — dusty rose. Used sparingly: featured pricing card, signature
+     pill, hover highlights. Complements sage beautifully. */
+  --color-accent: #C68C92;           /* dusty rose, saturated */
+  --color-accent-light: #E5BFC4;
+  --color-accent-dark: #A86E76;
+
+  /* Backgrounds */
   --color-bg: #F7F3EF;               /* cream */
-  --color-bg-alt: #EFE9E2;           /* warmer cream */
-  --color-bg-dark: #4F463F;
+  --color-bg-alt: #EADFD3;           /* warmer beige — clearer alternation */
+  --color-bg-dark: #3F3833;
   --color-surface: #FFFFFF;
-  --color-surface-alt: #E8DED6;      /* soft beige accent */
+  --color-surface-alt: #F2E8E0;      /* soft warm cream */
 
-  --color-text: #6E6259;
+  /* Text */
+  --color-text: #5C534B;
   --color-text-light: #8B7F75;
   --color-text-inverse: #F7F3EF;
-  --color-text-heading: #4F463F;
+  --color-text-heading: #3F3833;
 
+  /* Borders */
   --color-border: #D8CFC7;
   --color-border-light: #E8DED6;
 
-  --color-success: #7A8F7A;
+  /* Status (kept) */
+  --color-success: #7B8E7A;
   --color-error: #B47B6E;
 
   /* Typography — matches demo-massage-therapist (Nunito + Open Sans) */
@@ -73,69 +86,132 @@ body {
   text-transform: none;
 }
 
+/* Primary button — sage accent (the conversion CTA). Was dark taupe, but
+   that's our anchor neutral; the hero needs a colour that snaps the eye. */
 .btn--primary {
-  background: var(--color-primary);
-  color: var(--color-text-inverse);
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: #FFFFFF;
 }
 
 .btn--primary:hover {
-  background: var(--color-primary-dark);
+  background: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
 }
 
-/* Framework's `.hero--image .btn--primary` paints light taupe (--color-secondary)
-   for visibility against dark photos, which works for demos using a mid-tone
-   secondary. Heart & Glow's secondary is light taupe (#D8CFC7) — fades into
-   the warm hero photo. Force dark-taupe primary instead. */
+/* Hero / transparent-dark nav: keep sage primary visible on warm photos. */
 .hero--image .btn--primary,
 .nav--transparent-dark .btn--primary {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
-  color: var(--color-text-inverse);
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: #FFFFFF;
 }
 
 .hero--image .btn--primary:hover,
 .nav--transparent-dark .btn--primary:hover {
-  background-color: var(--color-primary-dark);
-  border-color: var(--color-primary-dark);
+  background-color: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
 }
 
+/* Secondary button — outlined dark taupe. Anchor for "View treatments" etc. */
+.btn--secondary {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn--secondary:hover {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+/* Accent button — dusty rose. Use sparingly: gift vouchers, soft prompts. */
 .btn--accent {
   background: var(--color-accent);
-  color: var(--color-primary-dark);
+  border-color: var(--color-accent);
+  color: #FFFFFF;
 }
 
+.btn--accent:hover {
+  background: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+}
+
+/* Outline button readable on cream/blush surfaces. */
+.btn--outline {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn--outline:hover {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+/* Section labels — sage to introduce the accent everywhere it appears. */
 .section-label {
   font-family: var(--font-body);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.18em;
-  color: var(--color-primary-light);
+  color: var(--color-secondary-dark);
 }
 
 .hero__heading {
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: -0.01em;
 }
 
 .hero__label {
   font-family: var(--font-body);
+  font-weight: 600;
   letter-spacing: 0.18em;
-  color: var(--color-primary-light);
+  color: var(--color-secondary-light);
 }
 
+/* Pricing cards — featured uses dusty rose tint + sage badge for hierarchy. */
 .pricing-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border-light);
 }
 
 .pricing-card--featured {
-  background: var(--color-surface-alt);
-  border-color: var(--color-primary-light);
+  background: linear-gradient(180deg, var(--color-accent-light) 0%, var(--color-surface) 60%);
+  border-color: var(--color-accent);
+  border-width: 2px;
+  position: relative;
+}
+
+.pricing-card__badge {
+  background: var(--color-accent);
+  color: #FFFFFF;
 }
 
 .pricing-card__price {
   font-family: var(--font-heading);
-  font-weight: 500;
-  color: var(--color-primary);
+  font-weight: 700;
+  color: var(--color-secondary-dark);
+}
+
+/* Treatment-list — featured ritual price in dusty rose so the eye picks up
+   the hierarchy without needing a featured-card variant. */
+.treatment-list__price {
+  color: var(--color-secondary-dark);
+}
+
+.treatment-list__details > summary {
+  color: var(--color-secondary-dark);
+}
+
+.treatment-list__details > summary:hover {
+  color: var(--color-secondary);
+}
+
+/* Pull-quote / blockquote — sage tint left border for visual rhythm. */
+.blockquote {
+  border-left: 3px solid var(--color-secondary);
+  padding-left: var(--space-lg);
+  color: var(--color-text);
+  font-style: italic;
 }
 
 .contact-info h2,
@@ -150,7 +226,13 @@ body {
 }
 
 .testimonial__stars svg {
-  fill: var(--color-secondary-dark);
+  fill: var(--color-accent);
+}
+
+/* Testimonial quote marks / accent — dusty rose decorative. */
+.testimonial__quote::before,
+.testimonial::before {
+  color: var(--color-accent);
 }
 
 @media (min-width: 768px) {
@@ -164,19 +246,106 @@ body {
   border: 1px solid var(--color-border-light);
 }
 
+/* CTA banner — sage → rose gradient. The brand's full palette in one strip. */
 .cta-banner {
-  background: linear-gradient(135deg, var(--color-secondary-light) 0%, var(--color-accent-light) 100%);
-  color: var(--color-text-heading);
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+  color: #FFFFFF;
 }
 
 .cta-banner h2,
 .cta-banner p {
-  color: var(--color-text-heading);
+  color: #FFFFFF;
+}
+
+.cta-banner .btn--primary,
+.cta-banner .btn--accent {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: var(--color-primary-dark);
+}
+
+.cta-banner .btn--primary:hover,
+.cta-banner .btn--accent:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: #FFFFFF;
+}
+
+/* Inline CTAs — the dark variant on About page sits as an anchor break. */
+.cta-inline {
+  background: var(--color-bg-alt);
+}
+
+.cta-inline--dark {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-secondary-dark) 100%);
+  color: #FFFFFF;
+}
+
+.cta-inline--dark h2,
+.cta-inline--dark p {
+  color: #FFFFFF;
+}
+
+/* Hero ticks (under buttons) — sage check icons */
+.hero__ticks li svg {
+  color: var(--color-secondary-light);
 }
 
 .footer {
   background: var(--color-bg-dark);
   color: var(--color-text-inverse);
+}
+
+/* Footer accent links + headings — sage to lift the dark area */
+.footer__heading {
+  color: var(--color-secondary-light);
+}
+
+.footer__link:hover {
+  color: var(--color-accent-light);
+}
+
+/* Card icon containers — sage tint instead of taupe */
+.card__icon {
+  color: var(--color-secondary-dark);
+}
+
+.card__icon svg {
+  stroke: var(--color-secondary-dark);
+}
+
+/* Service-detail icon (treatments page) — match */
+.service-detail__icon,
+.icon-box__icon,
+.contact-info__icon,
+.quals-list__icon {
+  color: var(--color-secondary-dark);
+}
+
+/* Anchor link colour throughout body copy */
+a {
+  color: var(--color-secondary-dark);
+}
+
+a:hover {
+  color: var(--color-accent-dark);
+}
+
+/* Nav links keep neutral taupe so the accent stays for CTAs */
+.nav__link,
+.nav__link:hover,
+.footer__link {
+  color: inherit;
+}
+
+/* Active nav underline — sage so the page indicator picks up the accent */
+.nav__link--active {
+  color: var(--color-secondary-dark);
+}
+
+/* Highlight box — sage left border */
+.highlight-box {
+  border-left: 4px solid var(--color-secondary);
 }
 
 /* Section alternation — white surface vs warm cream alt.
