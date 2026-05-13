@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://heartandglow-newbury.co.uk/sitemap.xml
+Sitemap: https://innerglowtherapyroom.com/sitemap.xml
